@@ -11,8 +11,8 @@
     <p>오늘은 주소 바로 검색하기 코딩!!!</p>
     <div id="map" style="width:800px;height:600px;"></div>
 
-<!--경로 바로가기 api 시작-->
-    <script type="text/javascript"
+    <!--경로 바로가기 api 시작-->
+<!--    <script type="text/javascript"
         src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c602ccde2ff09d728f2f5aa2bf756d2a"></script>
     <script>
         var container = document.getElementById('map');
@@ -64,26 +64,24 @@
 
         // 마커 위에 인포윈도우를 표시합니다. 두번째 파라미터인 marker를 넣어주지 않으면 지도 위에 표시됩니다
         infowindow.open(map, marker); 
-    </script>
+    </script>  -->
 
     <!--경로 바로가기 api 끝-->
 
-    <script
-  src="https://code.jquery.com/jquery-3.7.0.js"
-  integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
-  crossorigin="anonymous"></script>
-<script>
-  $.ajax({
-    method: "GET",
-    url: "https://dapi.kakao.com/v3/search/book?target=title",
-    data: { query : "미움받을 용기" },
-    Headers : {Authorization: "KakaoAK 10af4838ea5b36704b58696d86c92fa2"}
-  })
-    .done(function( msg ) {
-      console.log(msg);
-    });
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script>
+        $.ajax({
+            method: "GET",
+            url: "https://dapi.kakao.com/v3/search/book?target=title",
+            data: { query: "미움받을 용기" },
+            Headers: { Authorization: "KakaoAK 10af4838ea5b36704b58696d86c92fa2" }
+        })
+            .done(function (msg) {
+                console.log(msg);
+            });
 
-</script>
+    </script>
 </body>
 
 </html>
