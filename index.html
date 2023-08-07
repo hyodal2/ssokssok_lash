@@ -73,7 +73,7 @@
     <script>
         const REST_API_KEY = "d66e56ec11f684031853b36aabe755f7"
         $.ajax({
-            method: "GET",
+            type: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
             data: { query: "미움받을 용기" },
             Headers: { Authorization: `KakaoAK ${REST_API_KEY}` }
