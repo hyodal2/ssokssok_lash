@@ -71,11 +71,12 @@
     <script src="https://code.jquery.com/jquery-3.7.0.js"
         integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script>
+        const REST_API_KEY = "d66e56ec11f684031853b36aabe755f7"
         $.ajax({
             method: "GET",
             url: "https://dapi.kakao.com/v3/search/book?target=title",
             data: { query: "미움받을 용기" },
-            Headers: { Authorization: "KakaoAK 10af4838ea5b36704b58696d86c92fa2" }
+            Headers: { Authorization: `KakaoAK ${REST_API_KEY}` }
         })
             .done(function (msg) {
                 console.log(msg);
