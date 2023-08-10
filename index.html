@@ -68,21 +68,19 @@
 
     <!--경로 바로가기 api 끝-->
 
-    <script src="https://code.jquery.com/jquery-3.7.0.js"
-        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
-    <script>
-        $.ajax({
+<script>
+    //d66e56ec11f684031853b36aabe755f7   REST API
+    //c602ccde2ff09d728f2f5aa2bf756d2a   JAVASCRIPT KEY
+    let search = "미움받을 용기"
 
-            type: "GET",
-            url: "https://dapi.kakao.com/v3/search/book?target=title",
-            data: { query: "미움받을 용기" },
-            Headers: { Authorization: 'KakaoAK c602ccde2ff09d728f2f5aa2bf756d2a' }
-        })
-            .done(function (msg) {
-                console.log(msg);
-            });
+    fetch(`https://dapi.kakao.com/v3/search/book?target=title?query=${search}`,{
+        headers:{
+            Authorization: "KakaoAK d66e56ec11f684031853b36aabe755f7"       
+        }
 
-    </script>
+    }).then(res=>res.json())
+    .then(json=>console.log(json))
+</script>
 </body>
 
 </html>
