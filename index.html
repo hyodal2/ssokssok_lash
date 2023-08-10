@@ -76,7 +76,7 @@
     let search = prompt();
     let REST_API_KEY = "d66e56ec11f684031853b36aabe755f7";
 
-    fetch(`https://dapi.kakao.com/v3/search/book?target=title?query=${search}`,{
+    fetch(`https://dapi.kakao.com/v2/search/web?query=${search}`,{
         headers:{
             Authorization: `KakaoAK ${REST_API_KEY}`       
         }
