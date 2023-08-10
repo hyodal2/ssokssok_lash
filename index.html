@@ -71,8 +71,8 @@
 <script>
     //d66e56ec11f684031853b36aabe755f7   REST API
     //c602ccde2ff09d728f2f5aa2bf756d2a   JAVASCRIPT KEY
-    let search = "미움받을 용기"
-    let REST_API_KEY = "d66e56ec11f684031853b36aabe755f7"
+    let search = prompt();
+    let REST_API_KEY = "d66e56ec11f684031853b36aabe755f7";
 
     fetch(`https://dapi.kakao.com/v3/search/book?target=title?query=${search}`,{
         headers:{
